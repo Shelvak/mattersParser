@@ -1,0 +1,56 @@
+﻿.NodeContent {
+	font-family:Verdana;
+	font-size:small;
+}
+
+.Node {
+	position:absolute;
+	background-color: #CCDAFF;
+	border: 1px solid #5280FF;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	overflow:hidden;
+}
+
+.NodeHover {
+	position:absolute;
+	background-color: #8FADFF;
+	border: 1px solid #5280FF;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	overflow:hidden;
+}
+
+.NodeCollapsed {
+	position:absolute;
+	background-color: #8FADFF;
+	border: 2px solid black;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	overflow:hidden;
+}
+
+
+.NodeLine {
+	background-color: #000066;
+	position:absolute;
+	overflow:hidden;
+}
+
+.SpecialNode {
+  position:absolute;
+  background-color: Red;
+  border: 1px solid #5280FF;
+  text-align:center;
+  vertical-align:middle;
+  cursor:pointer;
+}
+
+.Container {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}

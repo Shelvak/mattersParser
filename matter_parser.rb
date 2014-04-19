@@ -6,6 +6,7 @@ class Matter
       @matter = matter
 
       generate_js
+      replace_generic_html_for_matter
     end
 
     def echo(str)
@@ -57,6 +58,7 @@ class Matter
 
 
     def generate_js
+      all_js_on_one_file
       write_the_beginner_node
 
       i = -1
@@ -82,6 +84,20 @@ class Matter
           write_lvl_3_node(i, ii, iii, item[:name])
         end
       end
+    end
+
+    def replace_generic_html_for_matter
+      html = File.read('generator.html')
+
+      html.gsub!('ChangeMeForMatter', @matter)
+      File.open("#{@matter}.html", 'w') { |f| f.write(html) }
+    end
+
+    def all_js_on_one_file
+      js  = File.read('JSTreeGraph.min.js')
+      js << File.read('helpers.js')
+
+      File.open("#{@matter}.js", 'w') { |f| f.write(js) }
     end
   end
 end
