@@ -32,7 +32,7 @@ class Matter
     end
 
     def write_the_beginner_node
-      echo "var rootNode = { Content: '#{@matter.upcase}', Nodes: [], Collapsed: true }"
+      echo "var rootNode = { Content: '#{@matter.upcase}', Nodes: [] }"
     end
 
     def write_lvl_1_node(index, name)
@@ -94,7 +94,7 @@ class Matter
     end
 
     def all_js_on_one_file
-      js  = File.read('JSTreeGraph.min.js')
+      js  = File.read('JSTreeGraph.js')
       js << File.read('helpers.js')
 
       File.open("#{@matter}.js", 'w') { |f| f.write(js) }

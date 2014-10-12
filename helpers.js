@@ -2,7 +2,7 @@ function RefreshTree() {
   DrawTree({
     Container: document.getElementById("dvTreeContainer"),
     RootNode: rootNode,
-    Layout: document.getElementById("dlLayout").value,
+    Layout: 'Vertical',
     OnNodeClick: NodeClick,
     OnNodeDoubleClick: NodeClick
   })
